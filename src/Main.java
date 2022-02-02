@@ -13,10 +13,11 @@ public class Main {
         } else {
             System.out.println("0 бонусных рублей:");
         }
+
         if (replenishment >= 1000) {
         System.out.println("Итоговая сумма на счету клиента");
         System.out.println((replenishment / spent+replenishment+amount) + " рублей");
-    } else {
+        } else {
             System.out.println("Итоговая сумма на счету клиента");
             System.out.println((replenishment+amount) + " рублей");
         }
