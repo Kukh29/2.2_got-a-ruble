@@ -13,8 +13,7 @@ public class Main {
 
         if (replenishment >= 1000) {
             bonus = replenishment * percent / 100;
-        }
-        if (replenishment <= 1000) {
+        } else {
             bonus = 0;
         }
         System.out.println("Бонус");
