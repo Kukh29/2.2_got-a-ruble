@@ -3,23 +3,23 @@ public class Main {
 
         // входные данные
         int amount = 100; // начальная сумма счета
-        int replenishment = 1000; // сумма пополнения счета
-        int spent = 100; // 1 рубль начисляется за каждые полные 100 рублей пополнения
+        int replenishment = 2000; // сумма пополнения счета
+        boolean registered = true;
 
         // логика
-        if (replenishment >= 1000) {
-            System.out.println("Количество бонусных рублей:");
-            System.out.println((replenishment / spent) + " рублей");
-        } else {
-            System.out.println("0 бонусных рублей:");
-        }
+
+        int percent = registered ? 1 : 0;
+        int bonus = replenishment * percent / 100;
 
         if (replenishment >= 1000) {
+            bonus = replenishment * percent / 100;
+        }
+        if (replenishment <= 1000) {
+            bonus = 0;
+        }
+        System.out.println("Бонус");
+        System.out.println((bonus) + " рублей");
         System.out.println("Итоговая сумма на счету клиента");
-        System.out.println((replenishment / spent+replenishment+amount) + " рублей");
-        } else {
-            System.out.println("Итоговая сумма на счету клиента");
-            System.out.println((replenishment+amount) + " рублей");
-        }
-        }
+        System.out.println((bonus + replenishment + amount) + " рублей");
+    }
 }
