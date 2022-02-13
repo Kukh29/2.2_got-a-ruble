@@ -3,12 +3,10 @@ public class Main {
 
         // входные данные
         int amount = 100; // начальная сумма счета
-        int replenishment = 2000; // сумма пополнения счета
-        boolean registered = true;
+        int replenishment = 100; // сумма пополнения счета
 
         // логика
-
-        int percent = registered ? 1 : 0;
+        int percent = 1;
         int bonus = replenishment * percent / 100;
 
         if (replenishment >= 1000) {
